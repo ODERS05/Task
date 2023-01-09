@@ -7,14 +7,6 @@ public class Employee {
 
     public Employee(String name, String employeeNumber, String hireDate) {
         this.name = name;
-        if (isValidEmpNum(employeeNumber))
-        {
-            employeeNumber = employeeNumber;
-        }
-        else
-        {
-            employeeNumber = "";
-        }
         this.employeeNumber = employeeNumber;
         this.hireDate = hireDate;
     }
@@ -45,6 +37,7 @@ public class Employee {
         {
             employeeNumber = "";
         }
+        this.employeeNumber = employeeNumber;
     }
 
     public String getHireDate() {

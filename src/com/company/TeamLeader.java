@@ -56,16 +56,23 @@ public class TeamLeader extends ProductionWorker{
     }
 
     @Override
-    public String toString() {
-        return "TeamLeader{" +
-                "name='" + name + '\'' +
-                ", employeeNumber='" + employeeNumber + '\'' +
-                ", hireDate='" + hireDate + '\'' +
+    public String toString() {String str = "Name: " + name + "\nEmployee Number: ";
+
+        if (employeeNumber.equals(""))
+        {
+            str += "INVALID EMPLOYEE NUMBER";
+        }
+        else
+        {
+            str += employeeNumber;
+        }
+        str += ", hireDate='" + hireDate + '\'' +
                 ", shift=" + shift +
                 ", hourlyPayRate=" + hourlyPayRate +
                 ", monthlyBonusAmount=" + monthlyBonusAmount +
                 ", requiredTrainingHours=" + requiredTrainingHours +
                 ", attendedTrainingHours=" + attendedTrainingHours +
                 '}';
+        return str;
     }
 }
